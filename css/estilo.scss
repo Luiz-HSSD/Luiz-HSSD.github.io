@@ -2,4 +2,70 @@
 }
 h1{
     color:navy;
-}   
+}
+.telegram{
+  background: url("../img/telegram.png") no-repeat center;
+}
+@media screen and (min-height: 900px) {
+
+    .telegram {
+        position: fixed;
+        left: 400px;
+        top: 205px;
+        display: inline;
+        height: 441px;
+        width: 441px;
+        border: 5px solid #2598D8;
+        border-radius: 427.5px;
+        padding: 200px;
+        animation-name: example; 
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+    }
+    @keyframes example {
+        from {
+          border-radius: 220.5px;
+          padding: 0px;
+        }
+        to {
+          margin-left: -200px;
+          margin-top: -200px;
+          padding: 200px;
+        }
+      }
+}
+@media screen and (max-height: 899px) {
+ 
+    .telegram {
+        position: fixed;
+        left: 350px;
+        top: 105px;
+        display: inline;
+        height: 220.5px;
+        width: 220.5px;
+        background-size: 220.5px 220.5px;
+        border: 5px solid blue;
+        border-radius: 210.25px;
+        padding: 100px;
+        animation-name: example;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+    }
+    @keyframes example {
+      from {
+        border-radius: 220.5px;
+        padding: 0px;
+      }
+      to {
+        margin-left: -100px;
+        margin-top: -100px;
+        padding: 100px;
+      }
+    }
+}
