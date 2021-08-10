@@ -1,13 +1,92 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+﻿
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <title>Luiz-HSSD</title>
+    <html lang="pt" xmlns="http://www.w3.org/1999/xhtml"></html>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body>
-    <a href="https://t.me/dev3712bot" class="telegram" />
-<footer><a href='https://www.freepik.com/vectors/logo'>Logo vector created by freepik - www.freepik.com</a> this is a sample of bot</footer>
+
+<body >
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="logo.svg" alt="Logo" />
+            </a>
+        </div>
+        <button class="menu-toggle" onclick="alteradestaque()">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre Mim</a>
+                </li>
+                <li>
+                    <a href="#gitea">gitea</a>
+                </li>
+                <li>
+                    <a href="#apiLuiz">Api</a>
+                </li>
+                <li>
+                    <a href="#contato">LES-Passagens aereas</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        // ...
+        var arrayhash = document.location.href.split("#"); 
+        if(arrayhash.length > 0)
+        {
+            var newHash = arrayhash[arrayhash.length - 1];
+            var array= document.querySelectorAll("[href=\"#"+newHash+"\"]:not([href=\"#login\"]):not([href=\"#registar\"])");
+            document.querySelectorAll("a").forEach(anchor => {
+                //alert(anchor);
+                anchor.classList.remove("selecionado")            
+                anchor.parentElement.classList.remove("selecionado") 
+            });
+            if(array.length>0)
+            {
+                array[array.length-1].classList.add("selecionado")        
+                array[array.length-1].parentElement.classList.add("selecionado")  
+            }
+        }
+
+        window.onhashchange = function(e){
+        var newURL = e.newURL; 
+        var arrayhash = newURL.split("#"); 
+        if(arrayhash.length > 0)
+        {
+                var newHash = newURL.split("#")[arrayhash.length-1];
+                var array= document.querySelectorAll("[href=\"#"+newHash+"\"]:not([href=\"#login\"]):not([href=\"#registar\"])");
+                document.querySelectorAll("a").forEach(anchor => {
+                    //alert(anchor);
+                    anchor.classList.remove("selecionado")            
+                    anchor.parentElement.classList.remove("selecionado") 
+                });
+                if(array.length>0)
+                {
+                    array[array.length-1].classList.add("selecionado")        
+                    array[array.length-1].parentElement.classList.add("selecionado")  
+                } 
+            }
+        };
+        function alteradestaque(){
+            document.querySelector(".menu").classList.add("destaque")            
+            document.querySelector(".autenticacao").classList.add("destaque") 
+        }
+    </script>
+        <a href="https://t.me/dev3712bot" class="telegram" />
+        <footer><!--<a href='https://www.freepik.com/vectors/logo'>Logo vector created by freepik - www.freepik.com</a> this is a sample of bot--></footer>
 </body>
+
 </html>

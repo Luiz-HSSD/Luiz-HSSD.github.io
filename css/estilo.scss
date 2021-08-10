@@ -1,4 +1,151 @@
-﻿body {
+﻿
+  /*
+  menu
+  */
+  *{
+    color: white;
+    text-decoration: none;
+}
+body{
+    font-family: 'Oswald',sans-serif;
+    font-size: 17px;
+    margin: 0;
+    background-color: lightgray;
+}
+.menu, li, .autenticacao, .menu-toggle, .logo {
+    display: inline-block;
+}
+.cabecalho{
+    background-color: rgba(0, 0, 0, 0.63);
+    border-style: solid;
+    border-color: #FFC312;
+    border-width:0 0 7px 0;
+    padding: 0px 7px 0 0px;
+    height: 90px;
+    box-sizing: border-box;
+}
+.autenticacao{
+    position: absolute;
+    right: 30px;
+    top: 33px;
+}
+.autenticacao > a{
+    margin: 7.5px;
+}
+a > img {
+    height: 70px;
+}
+.botao{
+    background-color: red;
+    padding: 15px 25px;
+    border-radius: 30px;
+}
+
+.menu > ul > li{
+    margin: 11px 2.5px 8px 2.5px;
+}
+
+.menu > ul > li> a  {
+    padding: 22px 15px ;
+    FLOAT: left;
+}
+.menu > ul > li:active{
+    color: black;
+    background-color: #FFC312;
+}
+.selecionado{
+    color: black;
+    background-color: #FFC312;
+}
+.menu > ul {
+    margin: 0 ;
+    float: right;
+}
+.logo{
+    margin: 7px;
+    float: left;
+}
+.menu-toggle{
+    display: none;
+}
+@media (max-width:850px) {
+    .autenticacao{
+        display: none;
+    }
+}
+
+@media (max-width:640px) {
+    .menu{
+        display: none;
+    }    
+    .menu-toggle{
+        /*display: inline-block;*/
+        float: right;
+        background-color: rgb(151, 151, 151);
+        padding: 20px 25px;
+        margin: 13px;
+        border: 1.5px solid rgb(181,181,181);
+        border-radius: 12px;
+    }
+    
+    .destaque{
+        display: block;
+        width: 100%;
+        clear: both;
+        float: left;
+        position: static;
+        left: 50%;
+        text-align: center;
+    }
+    .destaque > ul {
+        display: block;
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+    
+    .destaque > ul > li{
+        display: block;
+        /*padding: 22px 100vw;*/
+        /*margin: 300px;*/
+        width: 100%;
+        float: left;
+    }
+
+    .destaque > ul > li > a{
+        text-align: center;
+        width: 89%;
+    }
+    .destaque > a{
+        display: block;
+        float: left;
+        width: 89%;
+        text-align: center;                
+        padding: 20px 25px;
+    }
+    
+    .destaque.autenticacao{
+        width: 95%;
+    }
+}
+        
+@media (max-width:385px) {
+    .logo {
+        margin: 8px 7px 8px 7px;
+        float: left;
+    }
+    a > img {
+        height: 40px;
+    }
+    .destaque.autenticacao{
+        width: 95%;
+    }
+    .destaque.botao{
+        width: 85%;
+    }
+}
+/* body */
+body {
 }
 h1{
     color:navy;
@@ -6,43 +153,45 @@ h1{
 .telegram{
   background: url("../img/telegram.png") no-repeat center;
 }
-@media screen and (min-height: 900px) {
 
-    .telegram {
-        position: fixed;
-        left: 400px;
-        top: 205px;
-        display: inline;
-        height: 441px;
-        width: 441px;
-        border: 5px solid #2598D8;
-        border-radius: 427.5px;
-        padding: 200px;
-        animation-name: example; 
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-      -moz-animation-iteration-count: infinite;
-      -webkit-animation-iteration-count: infinite;
-      -o-animation-iteration-count: infinite;
-    }
-    @keyframes example {
-        from {
-          border-radius: 220.5px;
-          padding: 0px;
-        }
-        to {
-          margin-left: -200px;
-          margin-top: -200px;
-          padding: 200px;
-        }
-      }
+@media screen and (min-height: 900px) {
+  .telegram {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    display: inline;
+    height: 100px;
+    width: 100px;
+    background-size: 100px 100px;
+    border: 5px solid #2598D8;
+    border-radius: 205px;
+    padding: 100px;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+}
+@keyframes example {
+  from {
+    border-radius: 110.25px;
+    padding: 0px;
+  }
+
+  to {
+    margin-right: -100px;
+    margin-bottom: -100px;
+    padding: 100px;
+  }
+}
 }
 @media screen and (max-height: 899px) {
  
     .telegram {
         position: fixed;
-        left: 350px;
-        top: 105px;
+        right: 25px;
+        bottom: 25px;
         display: inline;
         height: 220.5px;
         width: 220.5px;
@@ -63,8 +212,8 @@ h1{
         padding: 0px;
       }
       to {
-        margin-left: -100px;
-        margin-top: -100px;
+        margin-right: -100px;
+        margin-bottom: -100px;
         padding: 100px;
       }
     }
