@@ -6,6 +6,10 @@
     color: white;
     text-decoration: none;
 }
+html, body {
+    min-height: 100% !important;
+    height: 100%;
+}
 body{
     font-family: 'Oswald',sans-serif;
     font-size: 17px;
@@ -16,6 +20,7 @@ body{
     display: inline-block;
 }
 .cabecalho{
+    position: fixed;
     background-color: rgba(0, 0, 0, 0.63);
     border-style: solid;
     border-color: #FFC312;
@@ -23,6 +28,8 @@ body{
     padding: 0px 7px 0 0px;
     height: 90px;
     box-sizing: border-box;
+    z-index: 9;
+    width: 100%;
 }
 .autenticacao{
     position: absolute;
@@ -79,7 +86,7 @@ a > img {
         display: none;
     }    
     .menu-toggle{
-        /*display: inline-block;*/
+        display: block;
         float: right;
         background-color: rgb(151, 151, 151);
         padding: 20px 25px;
@@ -134,9 +141,6 @@ a > img {
         margin: 8px 7px 8px 7px;
         float: left;
     }
-    a > img {
-        height: 40px;
-    }
     .destaque.autenticacao{
         width: 95%;
     }
@@ -147,13 +151,19 @@ a > img {
 /* body */
 
 h1{
-    color:navy;
+    color: #FFC312;
+    text-align: center;
+    vertical-align: middle;
 }
 .telegram{
   background: url("../img/telegram.png") no-repeat center;
 }
 
-@media screen and (min-height: 900px) {
+.whatsapp{
+    background: url("../img/zap.png") no-repeat center;
+  }
+/* icones */
+@media  (min-width: 900px) {
   .telegram {
     position: fixed;
     right: 50px;
@@ -172,6 +182,24 @@ h1{
   -webkit-animation-iteration-count: infinite;
   -o-animation-iteration-count: infinite;
 }
+.whatsapp {
+  position: fixed;
+  right: 350px;
+  bottom: 50px;
+  display: inline;
+  height: 100px;
+  width: 100px;
+  background-size: 100px 100px;
+  border: 5px solid rgb(0,149,50);;
+  border-radius: 205px;
+  padding: 100px;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+-moz-animation-iteration-count: infinite;
+-webkit-animation-iteration-count: infinite;
+-o-animation-iteration-count: infinite;
+}
 @keyframes example {
   from {
     border-radius: 110.25px;
@@ -185,19 +213,38 @@ h1{
   }
 }
 }
-@media screen and (max-height: 899px) {
+@media screen and (max-width: 899px) {
  
     .telegram {
+        position: fixed;
+        right: 225px;
+        bottom: 25px;
+        display: inline;
+        height: 50px;
+        width: 50px;
+        background-size: 50px 50px;
+        border: 3px solid #2598D8;
+        border-radius: 210.25px;
+        padding: 50px;
+        animation-name: example;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+    }
+     
+    .whatsapp {
         position: fixed;
         right: 25px;
         bottom: 25px;
         display: inline;
-        height: 220.5px;
-        width: 220.5px;
-        background-size: 220.5px 220.5px;
-        border: 5px solid blue;
+        height: 50px;
+        width: 50px;
+        background-size: 50px 50px;
+        border: 3px solid rgb(0,149,50);
         border-radius: 210.25px;
-        padding: 100px;
+        padding: 50px;
         animation-name: example;
         animation-duration: 2s;
         animation-iteration-count: infinite;
@@ -211,9 +258,22 @@ h1{
         padding: 0px;
       }
       to {
-        margin-right: -100px;
-        margin-bottom: -100px;
-        padding: 100px;
+        margin-right: -50px;
+        margin-bottom: -50px;
+        padding: 50px;
       }
     }
+}
+/* pagina conteudo */
+.paginaConteudo{
+    position: relative;
+    background:#f5f6fa;
+    width: 100%;
+    min-height: calc(100% - 97px);
+    height: calc(100% - 97px);
+}
+.titulo{
+    position: absolute;
+    top: 40%;
+    width: 100%;
 }

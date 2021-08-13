@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Luiz-HSSD</title>
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#6cc644">
     <html lang="pt" xmlns="http://www.w3.org/1999/xhtml"></html>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
@@ -36,12 +38,32 @@
                     <a href="#apiLuiz">Api</a>
                 </li>
                 <li>
-                    <a href="#contato">LES-Passagens aereas</a>
+                    <a href="#lesPassagens">LES-Passagens aereas</a>
                 </li>
             </ul>
         </nav>
     </header>
+    <div id="inicio" class="paginaConteudo">
+            <h1 class="titulo">Olá sou Luiz Henrique<br>
+            Este é meu site de Portifolio</h1>
+    </div>
 
+    <div id="sobre" class="paginaConteudo">
+        <h1 class="titulo">Olá sou Luiz Henrique Santos Sousa Diniz</h1>
+    </div>
+    
+    <div id="gitea" class="paginaConteudo">
+        <h1 class="titulo">Olá sou Luiz Henrique Santos Sousa Diniz</h1>
+    </div>
+    
+    <div id="apiLuiz" class="paginaConteudo">
+        <h1 class="titulo">Olá sou Luiz Henrique Santos Sousa Diniz</h1>
+    </div>
+    
+    
+    <div id="lesPassagens" class="paginaConteudo">
+        <h1 class="titulo">Olá sou Luiz Henrique</h1>
+    </div>        
     <script>
         // ...
         var arrayhash = document.location.href.split("#"); 
@@ -69,7 +91,6 @@
                 var newHash = newURL.split("#")[arrayhash.length-1];
                 var array= document.querySelectorAll("[href=\"#"+newHash+"\"]:not([href=\"#login\"]):not([href=\"#registar\"])");
                 document.querySelectorAll("a").forEach(anchor => {
-                    //alert(anchor);
                     anchor.classList.remove("selecionado")            
                     anchor.parentElement.classList.remove("selecionado") 
                 });
@@ -81,12 +102,13 @@
             }
         };
         function alteradestaque(){
-            document.querySelector(".menu").classList.add("destaque")            
-            document.querySelector(".autenticacao").classList.add("destaque") 
+            document.querySelector(".menu").classList.toggle("destaque");           
         }
     </script>
+        <a href="https://wa.me/+5511935000584" class="whatsapp" />
         <a href="https://t.me/dev3712bot" class="telegram" />
-        <footer><!--<a href='https://www.freepik.com/vectors/logo'>Logo vector created by freepik - www.freepik.com</a> this is a sample of bot--></footer>
+
+        <footer><!-- <a href='https://www.freepik.com/vectors/logo'>Logo vector created by freepik - www.freepik.com</a> this is a sample of bot--></footer>
 </body>
 
 </html>
