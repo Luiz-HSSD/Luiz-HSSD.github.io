@@ -98,7 +98,10 @@
                 if(array.length>0)
                 {
                     array[array.length-1].classList.add("selecionado")        
-                    array[array.length-1].parentElement.classList.add("selecionado")  
+                    array[array.length-1].parentElement.classList.add("selecionado") 
+                    if(window.innerWidth<=500){
+                        alteradestaque();
+                    } 
                 } 
             }
         };

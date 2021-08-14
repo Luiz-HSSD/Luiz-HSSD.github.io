@@ -2,7 +2,7 @@
   menu
   */
 * {
-  color: white;
+  color: #f5f6fa;
   text-decoration: none;
 }
 
@@ -15,7 +15,7 @@ body {
   font-family: 'Oswald',sans-serif;
   font-size: 17px;
   margin: 0;
-  background-color: lightgray;
+  background-color: #f5f6fa;
 }
 
 .menu, li, .autenticacao, .menu-toggle, .logo {
@@ -91,6 +91,10 @@ a > img {
 
 .menu-toggle {
   display: none;
+}
+
+.menu.destaque {
+  background-color: rgba(0, 0, 0, 0.63);
 }
 
 @media (max-width: 850px) {
