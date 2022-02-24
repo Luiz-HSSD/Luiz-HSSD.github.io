@@ -49,8 +49,7 @@
     </div>
 
     <div id="sobre" class="paginaConteudo">
-        <h1 class="titulo">Desenvolvedor 26 Anos 4 anos de experiência
-             <br/>tenho  mais afinidade com dotnet</h1>
+        <h1 id="aboutMe" class="titulo"></h1>
     </div>
     
     <div id="gitea" class="paginaConteudo">
@@ -67,10 +66,10 @@
     </div>        
     <script>
         // ...
-        var arrayhash = document.location.href.split("#"); 
-        if(arrayhash.length > 0)
+        var arrayHash = document.location.href.split("#"); 
+        if(arrayHash.length > 0)
         {
-            var newHash = arrayhash[arrayhash.length - 1];
+            var newHash = arrayHash[arrayHash.length - 1];
             var array= document.querySelectorAll("[href=\"#"+newHash+"\"]:not([href=\"#login\"]):not([href=\"#registar\"])");
             document.querySelectorAll("a").forEach(anchor => {
                 //alert(anchor);
@@ -86,10 +85,10 @@
 
         window.onhashchange = function(e){
         var newURL = e.newURL; 
-        var arrayhash = newURL.split("#"); 
-        if(arrayhash.length > 0)
+        arrayHash = newURL.split("#"); 
+        if(arrayHash.length > 0)
         {
-                var newHash = newURL.split("#")[arrayhash.length-1];
+                var newHash = newURL.split("#")[arrayHash.length-1];
                 var array= document.querySelectorAll("[href=\"#"+newHash+"\"]:not([href=\"#login\"]):not([href=\"#registar\"])");
                 document.querySelectorAll("a").forEach(anchor => {
                     anchor.classList.remove("selecionado")            
@@ -108,6 +107,22 @@
         function alteradestaque(){
             document.querySelector(".menu").classList.toggle("destaque");           
         }
+        var myAge = 0;
+        var yearsOfExperience = 0;
+        var dob = new Date("01/01/1995");
+        var month_diff = Date.now() - dob.getTime();
+        var age_dt = new Date(month_diff); 
+        var year = age_dt.getUTCFullYear();
+        var age = Math.abs(year - 1970);
+        myAge = age;
+        //anos de experiencia
+        dob = new Date("01/31/2017");
+        month_diff = Date.now() - dob.getTime();
+        age_dt = new Date(month_diff); 
+        year = age_dt.getUTCFullYear();
+        age = Math.abs(year - 1970);
+        yearsOfExperience = age;
+        document.getElementById("aboutMe").innerHTML = "Desenvolvedor " + myAge + " anos e " + yearsOfExperience + " anos de experiência<br/>tenho  mais afinidade com dotnet";
     </script>
         <a href="https://wa.me/+5511935000584" class="whatsapp" />
         <a href="https://t.me/dev3712bot" class="telegram" />
