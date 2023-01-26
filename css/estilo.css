@@ -327,4 +327,10 @@ h1 {
   top: 40%;
   width: 100%;
 }
+.titulo a {
+text-decoration: underline;
+}
+
+
+
 /*# sourceMappingURL=estilo.css.map */
