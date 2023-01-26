@@ -1,175 +1,189 @@
-﻿
-  /*
+/*
   menu
   */
-  *{
-    color: #f5f6fa;
-    text-decoration: none;
+* {
+  color: #f5f6fa;
+  text-decoration: none;
 }
+
 html, body {
-    min-height: 100% !important;
-    height: 100%;
+  min-height: 100% !important;
+  height: 100%;
 }
-body{
-    font-family: 'Oswald',sans-serif;
-    font-size: 17px;
-    margin: 0;
-    background-color: #f5f6fa;
+
+body {
+  font-family: 'Oswald',sans-serif;
+  font-size: 17px;
+  margin: 0;
+  background-color: #f5f6fa;
 }
+
 .menu, li, .autenticacao, .menu-toggle, .logo {
-    display: inline-block;
+  display: inline-block;
 }
-h1 a{
-    color: #2598D8;
+
+h1 a {
+  color: #2598D8;
 }
-.cabecalho{
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.63);
-    border-style: solid;
-    border-color: #FFC312;
-    border-width:0 0 7px 0;
-    padding: 0px 7px 0 0px;
-    height: 90px;
-    box-sizing: border-box;
-    z-index: 9;
-    width: 100%;
+
+.cabecalho {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.63);
+  border-style: solid;
+  border-color: #FFC312;
+  border-width: 0 0 7px 0;
+  padding: 0px 7px 0 0px;
+  height: 90px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 9;
+  width: 100%;
 }
-.autenticacao{
-    position: absolute;
-    right: 30px;
-    top: 33px;
+
+.autenticacao {
+  position: absolute;
+  right: 30px;
+  top: 33px;
 }
-.autenticacao > a{
-    margin: 7.5px;
+
+.autenticacao > a {
+  margin: 7.5px;
 }
+
 a > img {
-    height: 70px;
-}
-.botao{
-    background-color: red;
-    padding: 15px 25px;
-    border-radius: 30px;
+  height: 70px;
 }
 
-.menu > ul > li{
-    margin: 11px 2.5px 8px 2.5px;
+.botao {
+  background-color: red;
+  padding: 15px 25px;
+  border-radius: 30px;
 }
 
-.menu > ul > li> a  {
-    padding: 22px 15px ;
-    FLOAT: left;
+.menu > ul > li {
+  margin: 11px 2.5px 8px 2.5px;
 }
-.menu > ul > li:active{
-    color: black;
-    background-color: #FFC312;
+
+.menu > ul > li > a {
+  padding: 22px 15px;
+  FLOAT: left;
 }
-.selecionado{
-    color: black;
-    background-color: #FFC312;
+
+.menu > ul > li:active {
+  color: black;
+  background-color: #FFC312;
 }
+
+.selecionado {
+  color: black;
+  background-color: #FFC312;
+}
+
 .menu > ul {
-    margin: 0 ;
-    float: right;
+  margin: 0;
+  float: right;
 }
-.logo{
-    margin: 7px;
-    float: left;
+
+.logo {
+  margin: 7px;
+  float: left;
 }
-.menu-toggle{
+
+.menu-toggle {
+  display: none;
+}
+
+.menu.destaque {
+  background-color: rgba(0, 0, 0, 0.63);
+}
+
+@media (max-width: 850px) {
+  .autenticacao {
     display: none;
-}
-.menu.destaque{
-    background-color: rgba(0, 0, 0, 0.63); 
-}
-@media (max-width:850px) {
-    .autenticacao{
-        display: none;
-    }
+  }
 }
 
-@media (max-width:640px) {
-    .menu{
-        display: none;
-    }    
-    .menu-toggle{
-        display: block;
-        float: right;
-        background-color: rgb(151, 151, 151);
-        padding: 20px 25px;
-        margin: 13px;
-        border: 1.5px solid rgb(181,181,181);
-        border-radius: 12px;
-    }
-    
-    .destaque{
-        display: block;
-        width: 100%;
-        clear: both;
-        float: left;
-        position: static;
-        left: 50%;
-        text-align: center;
-    }
-    .destaque > ul {
-        display: block;
-        width: 100%;
-        float: left;
-        padding: 0;
-    }
-    
-    .destaque > ul > li{
-        display: block;
-        /*padding: 22px 100vw;*/
-        /*margin: 300px;*/
-        width: 100%;
-        float: left;
-    }
-
-    .destaque > ul > li > a{
-        text-align: center;
-        width: 89%;
-    }
-    .destaque > a{
-        display: block;
-        float: left;
-        width: 89%;
-        text-align: center;                
-        padding: 20px 25px;
-    }
-    
-    .destaque.autenticacao{
-        width: 95%;
-    }
-}
-        
-@media (max-width:385px) {
-    .logo {
-        margin: 8px 7px 8px 7px;
-        float: left;
-    }
-    .destaque.autenticacao{
-        width: 95%;
-    }
-    .destaque.botao{
-        width: 85%;
-    }
-}
-/* body */
-
-h1{
-    color: #FFC312;
+@media (max-width: 640px) {
+  .menu {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+    float: right;
+    background-color: #979797;
+    padding: 20px 25px;
+    margin: 13px;
+    border: 1.5px solid #b5b5b5;
+    border-radius: 12px;
+  }
+  .destaque {
+    display: block;
+    width: 100%;
+    clear: both;
+    float: left;
+    position: static;
+    left: 50%;
     text-align: center;
-    vertical-align: middle;
+  }
+  .destaque > ul {
+    display: block;
+    width: 100%;
+    float: left;
+    padding: 0;
+  }
+  .destaque > ul > li {
+    display: block;
+    /*padding: 22px 100vw;*/
+    /*margin: 300px;*/
+    width: 100%;
+    float: left;
+  }
+  .destaque > ul > li > a {
+    text-align: center;
+    width: 89%;
+  }
+  .destaque > a {
+    display: block;
+    float: left;
+    width: 89%;
+    text-align: center;
+    padding: 20px 25px;
+  }
+  .destaque.autenticacao {
+    width: 95%;
+  }
 }
-.telegram{
+
+@media (max-width: 385px) {
+  .logo {
+    margin: 8px 7px 8px 7px;
+    float: left;
+  }
+  .destaque.autenticacao {
+    width: 95%;
+  }
+  .destaque.botao {
+    width: 85%;
+  }
+}
+
+/* body */
+h1 {
+  color: #FFC312;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.telegram {
   background: url("../img/telegram.png") no-repeat center;
 }
 
-.whatsapp{
-    background: url("../img/zap.png") no-repeat center;
-  }
+.whatsapp {
+  background: url("../img/zap.png") no-repeat center;
+}
+
 /* icones */
-@media  (min-width: 900px) {
+@media (min-width: 900px) {
   .telegram {
     position: fixed;
     right: 50px;
@@ -181,105 +195,142 @@ h1{
     border: 5px solid #2598D8;
     border-radius: 205px;
     padding: 100px;
-    animation-name: example;
-    animation-duration: 2s;
+    -webkit-animation-name: example;
+            animation-name: example;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
     animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-}
-.whatsapp {
-  position: fixed;
-  right: 350px;
-  bottom: 50px;
-  display: inline;
-  height: 100px;
-  width: 100px;
-  background-size: 100px 100px;
-  border: 5px solid rgb(0,149,50);;
-  border-radius: 205px;
-  padding: 100px;
-  animation-name: example;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
--moz-animation-iteration-count: infinite;
--webkit-animation-iteration-count: infinite;
--o-animation-iteration-count: infinite;
-}
-@keyframes example {
-  from {
-    border-radius: 110.25px;
-    padding: 0px;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
   }
-
-  to {
-    margin-right: -100px;
-    margin-bottom: -100px;
+  .whatsapp {
+    position: fixed;
+    right: 350px;
+    bottom: 50px;
+    display: inline;
+    height: 100px;
+    width: 100px;
+    background-size: 100px 100px;
+    border: 5px solid #009532;
+    border-radius: 205px;
     padding: 100px;
+    -webkit-animation-name: example;
+            animation-name: example;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes example {
+    from {
+      border-radius: 110.25px;
+      padding: 0px;
+    }
+    to {
+      margin-right: -100px;
+      margin-bottom: -100px;
+      padding: 100px;
+    }
+  }
+  @keyframes example {
+    from {
+      border-radius: 110.25px;
+      padding: 0px;
+    }
+    to {
+      margin-right: -100px;
+      margin-bottom: -100px;
+      padding: 100px;
+    }
   }
 }
-}
+
 @media screen and (max-width: 899px) {
- 
-    .telegram {
-        position: fixed;
-        right: 225px;
-        bottom: 25px;
-        display: inline;
-        height: 50px;
-        width: 50px;
-        background-size: 50px 50px;
-        border: 3px solid #2598D8;
-        border-radius: 210.25px;
-        padding: 50px;
-        animation-name: example;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-      -moz-animation-iteration-count: infinite;
-      -webkit-animation-iteration-count: infinite;
-      -o-animation-iteration-count: infinite;
+  .telegram {
+    position: fixed;
+    right: 225px;
+    bottom: 25px;
+    display: inline;
+    height: 50px;
+    width: 50px;
+    background-size: 50px 50px;
+    border: 3px solid #2598D8;
+    border-radius: 210.25px;
+    padding: 50px;
+    -webkit-animation-name: example;
+            animation-name: example;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+  }
+  .whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    display: inline;
+    height: 50px;
+    width: 50px;
+    background-size: 50px 50px;
+    border: 3px solid #009532;
+    border-radius: 210.25px;
+    padding: 50px;
+    -webkit-animation-name: example;
+            animation-name: example;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes example {
+    from {
+      border-radius: 220.5px;
+      padding: 0px;
     }
-     
-    .whatsapp {
-        position: fixed;
-        right: 25px;
-        bottom: 25px;
-        display: inline;
-        height: 50px;
-        width: 50px;
-        background-size: 50px 50px;
-        border: 3px solid rgb(0,149,50);
-        border-radius: 210.25px;
-        padding: 50px;
-        animation-name: example;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-      -moz-animation-iteration-count: infinite;
-      -webkit-animation-iteration-count: infinite;
-      -o-animation-iteration-count: infinite;
+    to {
+      margin-right: -50px;
+      margin-bottom: -50px;
+      padding: 50px;
     }
-    @keyframes example {
-      from {
-        border-radius: 220.5px;
-        padding: 0px;
-      }
-      to {
-        margin-right: -50px;
-        margin-bottom: -50px;
-        padding: 50px;
-      }
+  }
+  @keyframes example {
+    from {
+      border-radius: 220.5px;
+      padding: 0px;
     }
+    to {
+      margin-right: -50px;
+      margin-bottom: -50px;
+      padding: 50px;
+    }
+  }
 }
+
 /* pagina conteudo */
-.paginaConteudo{
-    position: relative;
-    background:#f5f6fa;
-    width: 100%;
-    min-height: calc(100% - 97px);
-    height: calc(100% - 97px);
+.paginaConteudo {
+  position: relative;
+  background: #f5f6fa;
+  width: 100%;
+  min-height: calc(100% - 97px);
+  height: calc(100% - 97px);
 }
-.titulo{
-    position: absolute;
-    top: 40%;
-    width: 100%;
+
+.titulo {
+  position: absolute;
+  top: 40%;
+  width: 100%;
 }
+.titulo a {
+text-decoration: underline;
+}
+
+
+
+/*# sourceMappingURL=estilo.css.map */
