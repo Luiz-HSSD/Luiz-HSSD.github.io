@@ -331,6 +331,20 @@ h1 {
 text-decoration: underline;
 }
 
+.titulo-perfil{
+  z-index: 30;
+  text-align:start;
+  font-size: 18pt;
+  margin-left: 15px;
+}
+
+.avatar{
+  position: absolute;
+  right: 0;
+  top:225px;
+  border-radius: 150px;
+  width: 200px;
+}
 
 
 /*# sourceMappingURL=estilo.css.map */
