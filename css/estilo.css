@@ -331,6 +331,27 @@ h1 {
     }
   }
 }
+
+@media (max-width: 850px) {
+  .autenticacao {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .titulo-perfil {
+    z-index: 30;
+    text-align: start;
+    font-size: 18pt;
+    margin-left: 15px;
+  }
+  .avatar {
+    position: absolute;
+    right: 0;
+    top: 225px;
+    border-radius: 50%;
+    width: 200px;
+  }
+}
 /* pagina conteudo */
 .paginaConteudo {
   position: relative;
