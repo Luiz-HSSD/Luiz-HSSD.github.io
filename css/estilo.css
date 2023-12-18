@@ -6,6 +6,21 @@
   text-decoration: none;
 }
 
+.titulo-perfil {
+  z-index: 30;
+  text-align: start;
+  font-size: 28pt;
+  margin-left: 5%;
+}
+
+.avatar {
+  position: absolute;
+  right: 17%;
+  top: 23%;
+  border-radius: 50%;
+  width: 300px;
+}
+
 html, body {
   min-height: 100% !important;
   height: 100%;
@@ -112,7 +127,7 @@ a > img {
     position: absolute;
     right: 0;
     top: 225px;
-    border-radius: 150px;
+    border-radius: 50%;
     width: 200px;
   }
   .menu {
@@ -255,6 +270,19 @@ h1 {
   }
 }
 @media screen and (max-width: 899px) {
+  .titulo-perfil {
+    z-index: 30;
+    text-align: start;
+    font-size: 24pt;
+    margin-left: 35px;
+  }
+  .avatar {
+    position: absolute;
+    right: 84px;
+    top: 185px;
+    border-radius: 50%;
+    width: 300px;
+  }
   .telegram {
     position: fixed;
     right: 225px;
