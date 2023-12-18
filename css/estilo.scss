@@ -104,6 +104,22 @@ a > img {
 }
 
 @media (max-width: 640px) {
+
+  .titulo-perfil{
+    z-index: 30;
+    text-align:start;
+    font-size: 18pt;
+    margin-left: 15px;
+  }
+  
+  .avatar{
+    position: absolute;
+    right: 0;
+    top:225px;
+    border-radius: 150px;
+    width: 200px;
+  }
+
   .menu {
     display: none;
   }
@@ -155,6 +171,20 @@ a > img {
 }
 
 @media (max-width: 385px) {
+  .titulo-perfil{
+    z-index: 30;
+    text-align:start;
+    font-size: 18pt;
+    margin-left: 15px;
+  }
+  
+  .avatar{
+    position: absolute;
+    right: 0;
+    top:185px;
+    border-radius: 75px;
+    width: 125px;
+  }
   .logo {
     margin: 8px 7px 8px 7px;
     float: left;
@@ -331,20 +361,7 @@ h1 {
 text-decoration: underline;
 }
 
-.titulo-perfil{
-  z-index: 30;
-  text-align:start;
-  font-size: 18pt;
-  margin-left: 15px;
-}
 
-.avatar{
-  position: absolute;
-  right: 0;
-  top:225px;
-  border-radius: 150px;
-  width: 200px;
-}
 
 
 /*# sourceMappingURL=estilo.css.map */

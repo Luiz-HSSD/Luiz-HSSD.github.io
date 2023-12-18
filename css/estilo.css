@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-  font-family: 'Oswald',sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 17px;
   margin: 0;
   background-color: #f5f6fa;
@@ -34,8 +34,7 @@ h1 a {
   border-width: 0 0 7px 0;
   padding: 0px 7px 0 0px;
   height: 90px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   z-index: 9;
   width: 100%;
 }
@@ -102,8 +101,20 @@ a > img {
     display: none;
   }
 }
-
 @media (max-width: 640px) {
+  .titulo-perfil {
+    z-index: 30;
+    text-align: start;
+    font-size: 18pt;
+    margin-left: 15px;
+  }
+  .avatar {
+    position: absolute;
+    right: 0;
+    top: 225px;
+    border-radius: 150px;
+    width: 200px;
+  }
   .menu {
     display: none;
   }
@@ -153,8 +164,20 @@ a > img {
     width: 95%;
   }
 }
-
 @media (max-width: 385px) {
+  .titulo-perfil {
+    z-index: 30;
+    text-align: start;
+    font-size: 18pt;
+    margin-left: 15px;
+  }
+  .avatar {
+    position: absolute;
+    right: 0;
+    top: 185px;
+    border-radius: 75px;
+    width: 125px;
+  }
   .logo {
     margin: 8px 7px 8px 7px;
     float: left;
@@ -166,7 +189,6 @@ a > img {
     width: 85%;
   }
 }
-
 /* body */
 h1 {
   color: #FFC312;
@@ -195,10 +217,8 @@ h1 {
     border: 5px solid #2598D8;
     border-radius: 205px;
     padding: 100px;
-    -webkit-animation-name: example;
-            animation-name: example;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    animation-name: example;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
@@ -215,25 +235,12 @@ h1 {
     border: 5px solid #009532;
     border-radius: 205px;
     padding: 100px;
-    -webkit-animation-name: example;
-            animation-name: example;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    animation-name: example;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
     -o-animation-iteration-count: infinite;
-  }
-  @-webkit-keyframes example {
-    from {
-      border-radius: 110.25px;
-      padding: 0px;
-    }
-    to {
-      margin-right: -100px;
-      margin-bottom: -100px;
-      padding: 100px;
-    }
   }
   @keyframes example {
     from {
@@ -247,7 +254,6 @@ h1 {
     }
   }
 }
-
 @media screen and (max-width: 899px) {
   .telegram {
     position: fixed;
@@ -260,10 +266,8 @@ h1 {
     border: 3px solid #2598D8;
     border-radius: 210.25px;
     padding: 50px;
-    -webkit-animation-name: example;
-            animation-name: example;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    animation-name: example;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
@@ -280,25 +284,12 @@ h1 {
     border: 3px solid #009532;
     border-radius: 210.25px;
     padding: 50px;
-    -webkit-animation-name: example;
-            animation-name: example;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    animation-name: example;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
     -o-animation-iteration-count: infinite;
-  }
-  @-webkit-keyframes example {
-    from {
-      border-radius: 220.5px;
-      padding: 0px;
-    }
-    to {
-      margin-right: -50px;
-      margin-bottom: -50px;
-      padding: 50px;
-    }
   }
   @keyframes example {
     from {
@@ -312,7 +303,6 @@ h1 {
     }
   }
 }
-
 /* pagina conteudo */
 .paginaConteudo {
   position: relative;
@@ -327,24 +317,9 @@ h1 {
   top: 40%;
   width: 100%;
 }
+
 .titulo a {
-text-decoration: underline;
+  text-decoration: underline;
 }
-
-.titulo-perfil{
-  z-index: 30;
-  text-align:start;
-  font-size: 18pt;
-  margin-left: 15px;
-}
-
-.avatar{
-  position: absolute;
-  right: 0;
-  top:225px;
-  border-radius: 150px;
-  width: 200px;
-}
-
 
 /*# sourceMappingURL=estilo.css.map */
